@@ -35,6 +35,11 @@ div.modal-header {
 
 
 
+.title{
+    margin-top: 10px;
+    font-size: 30px;
+    text-decoration-line: underline overline;
+}
 .container {
     border-radius: 5px;
     padding: 10px;
@@ -42,9 +47,8 @@ div.modal-header {
     height: auto;
     margin: 0 auto;
     flex-direction: row;
-
-
 }
+
 
 ul.lista-produtos {
     display: flex;
