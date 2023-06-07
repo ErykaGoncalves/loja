@@ -1,3 +1,5 @@
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/shopping-cart.css');
+
 * {
     box-sizing: border-box;
 }
@@ -11,16 +13,27 @@ body {
     color: #ffffff;
 }
 
-.modal-body{
+#navbar-brand {
+    width: 50px;
+   
+}
+.nav-link {
+    font-size: 15px;
+    font-weight: bold;
+}
+.modal-body {
     color: #000;
 }
-div.modal-header{
-    background: rgb(169,168,209);
-    background: linear-gradient(90deg, rgba(169,168,209,1) 0%, rgba(104,104,117,1) 43%, rgba(34,34,34,1) 100%);}
 
-#navbar-brand {
-    width: 40px;
+div.modal-header {
+    background: #0B5ED7;
 }
+
+.btn-secondary:hover {
+    background: #990100;
+}
+
+
 
 .container {
     border-radius: 5px;
@@ -44,6 +57,7 @@ ul.lista-produtos {
 
 
 .lista-produtos li {
+    font-size: medium;
     flex-basis: calc(33.33% - 20px);
     margin: 10px;
     background-color: #272C33;
@@ -55,7 +69,6 @@ ul.lista-produtos {
 
 .lista-produtos:hover li:hover {
     background-color: #323841;
-    cursor: pointer;
     box-shadow: 1px 2px 20px 1px #494949;
 
 }
@@ -64,13 +77,17 @@ ul.lista-produtos {
     width: 100%;
     height: auto;
     border-radius: 5px;
-    
+
 }
 
 .produto-1 h2,
 .produto-2 h2,
 .produto-3 h2 {
     margin-top: 10px;
+    font-size: 1.5rem;
+    color: #990100;
+    text-decoration: underline;
+
 }
 
 .produto-1 p,
@@ -85,6 +102,26 @@ ul.lista-produtos {
 
 .price {
     font-weight: bold;
-    color: #8797B0;
-    font-size: large;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.button-sales {
+    display: grid;
+}
+
+.button-sale {
+    color: #fff;
+    background: #198754;
+    border-radius: 5px;
+    border-color: #198754;
+    margin-top: 40px;
+}
+
+.button-details {
+    color: #fff;
+    background: #0B5ED7;
+    border-radius: 5px;
+    border-color: #0B5ED7;
+    align-items: center;
 }
