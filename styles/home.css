@@ -11,6 +11,8 @@ body {
     margin: 0;
     padding: 0;
     color: #ffffff;
+    
+    align-items: center;
 }
 
 #navbar-brand {
@@ -35,18 +37,22 @@ div.modal-header {
     background: #990100;
 }
 
-
+ul#apiData.lista-produtos{
+    width: 60vw;
+}
 
 .title {
     margin-top: 10px;
     font-size: 30px;
-    text-decoration-line: underline overline;
+    text-decoration-line: underline ;
+    text-decoration-color: #990100;
+    text-decoration-thickness: 5px;
 }
 
 .container {
     border-radius: 5px;
     padding: 10px;
-    width: 50vw;
+    width: 100vw;
     height: auto;
     margin: 0 auto;
     flex-direction: row;
@@ -56,7 +62,6 @@ div.modal-header {
 ul.lista-produtos {
     display: flex;
     list-style: none;
-    border-radius: 10px;
     justify-content: space-between;
     padding: 0;
     flex-wrap: wrap;
@@ -65,13 +70,13 @@ ul.lista-produtos {
 
 .lista-produtos li {
     font-size: medium;
-    flex-basis: calc(33.33% - 20px);
+    width: 250px;
+    height: auto;
     margin: 10px;
-    background-color: #272C33;
+    background-color: #990100;
     border-radius: 5px;
     padding: 10px;
     box-shadow: 1px 2px 20px 1px #202020;
-
 }
 
 .lista-produtos:hover li:hover {
@@ -87,10 +92,19 @@ ul.lista-produtos {
 
 }
 
+.info-produto{
+    margin-top: auto;
+}
+
+.produto-1 {
+    display: flex;
+    flex-direction: column;
+  }
+
 .produto-1 h2 {
     margin-top: 10px;
     font-size: 1.5rem;
-    color: #990100;
+    color: #fff;
     text-decoration: underline;
 
 }
@@ -98,6 +112,7 @@ ul.lista-produtos {
 .produto-1 p {
     margin-bottom: 50px;
 }
+
 
 .price-box {
     margin-top: 10px;
@@ -111,6 +126,8 @@ ul.lista-produtos {
 
 .button-sales {
     display: grid;
+    padding: 10px;
+    margin-top: 100px;
 }
 
 .button-sale {
@@ -118,7 +135,6 @@ ul.lista-produtos {
     background: #198754;
     border-radius: 5px;
     border-color: #198754;
-    margin-top: 40px;
 }
 
 .button-details {
@@ -128,3 +144,9 @@ ul.lista-produtos {
     border-color: #0B5ED7;
     align-items: center;
 }
+
+.figcaption-element {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+  }
