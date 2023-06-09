@@ -14,6 +14,7 @@ fetch('https://fakestoreapi.com/products/')
 
         const productImageElement = document.createElement('img');
         productImageElement.src = product.image;
+        productImageElement.classList.add('produto-img');
         productImageElement.alt = 'description image';
         productImageElement.style.width = '230px'
         productImageElement.style.height = '350px'
@@ -23,11 +24,19 @@ fetch('https://fakestoreapi.com/products/')
         figcaptionElement.classList.add('info-produto');
 
         const productTitleElement = document.createElement('h2');
+        productTitleElement.id = 'productTitle';
         productTitleElement.innerText = product.title;
 
         const productLinkElement = document.createElement('a');
         productLinkElement.href = `./detalhes.html?id=${product.id}`;
-        productLinkElement.appendChild(productTitleElement);
+
+        const productRatingElement = document.createElement('div');
+        productRatingElement.innerHTML = getStarRating(product.rating.rate);
+        productRatingElement.classList = 'productRating';
+
+        const productPriceElement = document.createElement('p');
+        productPriceElement.innerText = `$ ${product.price}`;
+        productPriceElement.classList = 'productPrice';
 
         const buttonSalesElement = document.createElement('div');
         buttonSalesElement.classList.add('button-sales');
@@ -35,6 +44,9 @@ fetch('https://fakestoreapi.com/products/')
         const buttonSaleElement = document.createElement('button');
         buttonSaleElement.classList.add('button-sale');
         buttonSaleElement.innerText = 'Comprar';
+        buttonSaleElement.addEventListener('click', () => {
+          window.alert('AÇÃO NÃO DISPONÍVEL')
+        });
 
         const buttonDetailsElement = document.createElement('button');
         buttonDetailsElement.classList.add('button-details');
@@ -43,10 +55,16 @@ fetch('https://fakestoreapi.com/products/')
           window.location.href = productLinkElement.href;
         });
 
+        figcaptionElement.appendChild(productTitleElement);
         figcaptionElement.appendChild(productLinkElement);
+        figcaptionElement.appendChild(productRatingElement);
+        figcaptionElement.appendChild(productPriceElement);
+
+        //botões
+        figcaptionElement.appendChild(buttonSalesElement);
         buttonSalesElement.appendChild(buttonSaleElement);
         buttonSalesElement.appendChild(buttonDetailsElement);
-        figcaptionElement.appendChild(buttonSalesElement);
+
         productContainer.appendChild(figcaptionElement);
         apiDataElement.appendChild(productContainer);
       });
@@ -65,5 +83,27 @@ fetch('https://fakestoreapi.com/products/')
       apiDataElement.innerHTML = '';
       displayProducts(filteredProducts);
     });
+
+    function getStarRating(rating) {
+      const fullStars = Math.floor(rating);
+      const halfStar = rating % 1 !== 0;
+      const emptyStars = 5 - Math.ceil(rating);
+
+      let starRating = '';
+
+      for (let i = 0; i < fullStars; i++) {
+        starRating += '<i class="fas fa-star"></i>';
+      }
+
+      if (halfStar) {
+        starRating += '<i class="fas fa-star-half-alt"></i>';
+      }
+
+      for (let i = 0; i < emptyStars; i++) {
+        starRating += '<i class="far fa-star"></i>';
+      }
+
+      return starRating;
+    }
   })
   .catch(error => console.log(error));

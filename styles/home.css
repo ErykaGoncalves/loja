@@ -91,7 +91,6 @@ ul.lista-produtos {
     border-radius: 5px;
 
 }
-
 .info-produto{
     margin-top: auto;
 }
@@ -113,21 +112,22 @@ ul.lista-produtos {
     margin-bottom: 50px;
 }
 
-
-.price-box {
+.productPrice {
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 25px;
+    text-decoration: underline;
     margin-top: 10px;
 }
 
-.price {
-    font-weight: bold;
-    color: #ffffff;
-    font-size: 20px;
-}
+.productRating{
+    margin-top: 10px;
+    color: #F4BD00;
+  }
 
 .button-sales {
     display: grid;
     padding: 10px;
-    margin-top: 100px;
 }
 
 .button-sale {
@@ -149,4 +149,10 @@ ul.lista-produtos {
     display: flex;
     justify-content: space-between;
     margin-top: auto;
+  }
+
+  @media screen and (max-width: 600px) {
+    .container {
+        width: 75vw;
+    }
   }

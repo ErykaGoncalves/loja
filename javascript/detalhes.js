@@ -42,5 +42,6 @@ fetch(`https://fakestoreapi.com/products/${productId}`)
         productDetailsElement.appendChild(productCategoryElement);
         productDetailsElement.appendChild(productPriceElement);
         productDetailsElement.appendChild(productRatingElement);
+        
     })
     .catch(error => console.log(error));
