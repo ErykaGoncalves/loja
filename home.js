@@ -7,13 +7,18 @@ fetch('https://fakestoreapi.com/products/')
     apiDataElement.innerHTML = '';
 
     json.forEach(product => {
+
+      const productText = document.createElement('h1');
+      productText.src = product.text;
+
       const productContainer = document.createElement('li');
       productContainer.classList.add('produto-1');
 
       const productImageElement = document.createElement('img');
       productImageElement.src = product.image;
       productImageElement.alt = 'description image';
-      productImageElement.classList.add('config-img');
+      productImageElement.style.width = '100%'
+      productImageElement.style.height = '350px'
       productContainer.appendChild(productImageElement);
 
       const figcaptionElement = document.createElement('figcaption');
@@ -24,15 +29,16 @@ fetch('https://fakestoreapi.com/products/')
       productTitleElement.innerText = product.title;
       figcaptionElement.appendChild(productTitleElement);
 
-      const buttonSalesElement = document.createElement('div');
+     /* const buttonSalesElement = document.createElement('div');
       buttonSalesElement.classList.add('button-sales');
+      */
 
       const buttonDetailsElement = document.createElement('button');
       buttonDetailsElement.classList.add('button-details');
       buttonDetailsElement.innerText = 'Detalhes';
-      buttonSalesElement.appendChild(buttonDetailsElement);
 
-      figcaptionElement.appendChild(buttonSalesElement);
+      //buttonSalesElement.appendChild(buttonDetailsElement);
+      //figcaptionElement.appendChild(buttonSalesElement);
       productContainer.appendChild(figcaptionElement);
       apiDataElement.appendChild(productContainer);
     });

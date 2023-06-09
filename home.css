@@ -15,12 +15,14 @@ body {
 
 #navbar-brand {
     width: 50px;
-   
+
 }
+
 .nav-link {
     font-size: 15px;
     font-weight: bold;
 }
+
 .modal-body {
     color: #000;
 }
@@ -35,11 +37,12 @@ div.modal-header {
 
 
 
-.title{
+.title {
     margin-top: 10px;
     font-size: 30px;
     text-decoration-line: underline overline;
 }
+
 .container {
     border-radius: 5px;
     padding: 10px;
@@ -84,9 +87,7 @@ ul.lista-produtos {
 
 }
 
-.produto-1 h2,
-.produto-2 h2,
-.produto-3 h2 {
+.produto-1 h2 {
     margin-top: 10px;
     font-size: 1.5rem;
     color: #990100;
@@ -94,9 +95,7 @@ ul.lista-produtos {
 
 }
 
-.produto-1 p,
-.produto-2 p,
-.produto-3 p {
+.produto-1 p {
     margin-bottom: 50px;
 }
 
