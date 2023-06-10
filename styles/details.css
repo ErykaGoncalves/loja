@@ -13,6 +13,7 @@ body {
     color: #ffffff;
 }
 
+
 #navbar-brand {
     width: 50px;
    
@@ -27,6 +28,10 @@ body {
 
 div.modal-header {
     background: #0B5ED7;
+}
+
+.btn-primary{
+    margin: 10px 10px 10px 0px;
 }
 
 .btn-secondary:hover {
