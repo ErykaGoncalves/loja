@@ -28,7 +28,7 @@ fetch('https://fakestoreapi.com/products/')
         productTitleElement.innerText = product.title;
 
         const productLinkElement = document.createElement('a');
-        productLinkElement.href = `./html/detalhes.html?id=${product.id}`;
+        productLinkElement.href = `./detalhes.html?id=${product.id}`;
 
         const productRatingElement = document.createElement('div');
         productRatingElement.innerHTML = getStarRating(product.rating.rate);
